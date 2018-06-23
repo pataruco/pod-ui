@@ -24,7 +24,8 @@
           "**/scripts/*.js",
           "**/config/*.js",
           "**/*.test.js",
-          "**/mocks/**/*.js"
+          "**/mocks/**/*.js",
+          "*.js"
         ],
         "optionalDependencies": false,
         "peerDependencies": false
