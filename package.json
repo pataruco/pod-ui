@@ -6,6 +6,9 @@
   "author": "Pedro Martin <pataruco@gmail.com>",
   "license": "MIT",
   "private": true,
+  "engines": {
+    "node": "v10.5.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.51",
     "@babel/core": "^7.0.0-beta.51",
