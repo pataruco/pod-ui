@@ -1,0 +1,65 @@
+{
+  "numFailedTestSuites": 0,
+  "numFailedTests": 0,
+  "numPassedTestSuites": 1,
+  "numPassedTests": 1,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 0,
+  "numTotalTestSuites": 1,
+  "numTotalTests": 1,
+  "openHandles": [],
+  "snapshot": {
+    "added": 0,
+    "didUpdate": true,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 1,
+    "total": 1,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0
+  },
+  "startTime": 1529793663477,
+  "success": true,
+  "testResults": [
+    {
+      "console": null,
+      "failureMessage": null,
+      "numFailingTests": 0,
+      "numPassingTests": 1,
+      "numPendingTests": 0,
+      "perfStats": { "end": 1529793665589, "start": 1529793664153 },
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 1,
+        "unchecked": 0,
+        "unmatched": 0,
+        "updated": 0,
+        "uncheckedKeys": []
+      },
+      "testFilePath": "/Users/pataruco/Development/pod-ui/src/app/app.test.tsx",
+      "testResults": [
+        {
+          "ancestorTitles": ["App"],
+          "duration": 8,
+          "failureMessages": [],
+          "fullName": "App renders",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "renders"
+        }
+      ],
+      "sourceMaps": {},
+      "skipped": false,
+      "leaks": false
+    }
+  ],
+  "wasInterrupted": false
+}
