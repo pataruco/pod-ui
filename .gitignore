@@ -1,2 +1,14 @@
+# dependencies
 node_modules
-dist
+
+# testing
+tests/results.json
+
+
+# production
+/dist
+
+# misc
+.DS_Store
+yarn-debug.log*
+yarn-error.log*

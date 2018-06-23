@@ -18,14 +18,21 @@
     "@babel/preset-stage-0": "^7.0.0-beta.51",
     "@babel/preset-typescript": "^7.0.0-beta.51",
     "@babel/runtime": "^7.0.0-beta.51",
+    "@types/enzyme": "^3.1.11",
+    "@types/jest": "^23.1.1",
+    "@types/node": "^10.3.5",
     "@types/react": "^16.4.1",
     "@types/react-dom": "^16.0.6",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.5",
+    "babel-jest": "^23.0.1",
     "babel-loader": "^7.1.4",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
     "css-loader": "^0.28.11",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
     "eslint": "^5.0.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-prettier": "^2.9.0",
@@ -37,6 +44,9 @@
     "eslint-plugin-react": "^7.9.1",
     "eslint-plugin-security": "^1.4.0",
     "husky": "^0.14.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.1.0",
+    "jsdom": "^11.11.0",
     "lint-staged": "^7.2.0",
     "postcss-flexbugs-fixes": "^3.3.1",
     "postcss-import": "^11.1.0",
@@ -69,6 +79,7 @@
     "lint": "yarn typecheck && yarn eslint && yarn tslint",
     "precommit": "lint-staged",
     "start": "webpack-dev-server --mode development",
+    "test": "jest ./src --setupTestFrameworkScriptFile=./config/jest/index.js",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "tslint": "tslint -c tslint.json '{src,test}/**/*.{ts,tsx}' --project .",
     "typecheck": "tsc"
@@ -90,5 +101,44 @@
       "tslint -c tslint.json --fix",
       "git add"
     ]
+  },
+  "jest": {
+    "testResultsProcessor": "./tests/json-reporter.js",
+    "collectCoverageFrom": [
+      "!src/**/*.d.ts",
+      "src/**/*.{js,jsx,ts,tsx}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/?(*.)(spec|test).(js|ts|tsx)?(x)",
+      "<rootDir>/tests/**/?(*.)(spec|test).(js|ts|tsx)?(x)"
+    ],
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node",
+      "ts",
+      "tsx"
+    ],
+    "moduleNameMapper": {
+      "\\.(css)$": "identity-obj-proxy"
+    }
   }
 }
