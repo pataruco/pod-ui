@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "jsx": "react",
+    "lib": ["es2016", "dom"],
+    "module": "es6",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "pretty": true,
+    "rootDir": ".",
+    "sourceMap": true,
+    "strict": true,
+    "paths": {
+      "components/*": ["src/components/*"],
+      "config/*": ["src/config/*"],
+      "typeRoots": ["node_modules/@types"],
+      "pages/*": ["src/pages/*"],
+      "state/*": ["src/state/*"],
+      "types/*": ["src/types/*"]
+    },
+    "typeRoots": ["node_modules/@types"],
+    "target": "es5"
+  },
+  "exclude": ["node_modules", "build", "scripts", "webpack", "jest"]
+}
