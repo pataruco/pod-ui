@@ -15,6 +15,7 @@ module.exports = {
   entry: [
     require.resolve('./config/polyfills'),
     require.resolve('react-dev-utils/webpackHotDevClient'),
+    './src/index.js',
   ],
   mode: 'development',
   module: {
