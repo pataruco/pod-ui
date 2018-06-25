@@ -1,5 +1,3 @@
-// import { createBrowserHistory } from 'history';
-// import { routerMiddleware } from 'react-router-redux';
 import { applyMiddleware, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import reducer from 'state/reducer';
@@ -10,21 +8,8 @@ declare global {
   }
 }
 
-// let history;
-// export const getHistory = () => {
-//   if (!history) {
-//     history = createBrowserHistory({ basename: PUBLIC_URL });
-//   }
-
-//   return history;
-// };
-
 export const getStore = (defaultState = {}) => {
-  const middlewares = [
-    thunk,
-    // pageQueryMiddleware,
-    // routerMiddleware(getHistory()),
-  ];
+  const middlewares = [thunk];
 
   const composeEnhancers =
     process.env.NODE_ENV === 'production'

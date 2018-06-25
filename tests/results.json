@@ -1,13 +1,13 @@
 {
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
-  "numPassedTestSuites": 1,
-  "numPassedTests": 1,
+  "numPassedTestSuites": 3,
+  "numPassedTests": 5,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
-  "numTotalTestSuites": 1,
-  "numTotalTests": 1,
+  "numTotalTestSuites": 3,
+  "numTotalTests": 5,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -24,16 +24,60 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1529793663477,
+  "startTime": 1529937884844,
   "success": true,
   "testResults": [
     {
-      "console": null,
+      "console": [],
+      "failureMessage": null,
+      "numFailingTests": 0,
+      "numPassingTests": 2,
+      "numPendingTests": 0,
+      "perfStats": { "end": 1529937887025, "start": 1529937885424 },
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "unmatched": 0,
+        "updated": 0,
+        "uncheckedKeys": []
+      },
+      "testFilePath":
+        "/Users/pataruco/Development/pod-ui/src/state/user/reducer.test.ts",
+      "testResults": [
+        {
+          "ancestorTitles": ["User reducer", "START_DATA_FETCH"],
+          "duration": 3,
+          "failureMessages": [],
+          "fullName": "User reducer START_DATA_FETCH set loading state to true",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "set loading state to true"
+        },
+        {
+          "ancestorTitles": ["User reducer", "END_FETCH_DATA"],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "User reducer END_FETCH_DATA set loading state to true",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "set loading state to true"
+        }
+      ],
+      "sourceMaps": {},
+      "skipped": false,
+      "leaks": false
+    },
+    {
+      "console": [],
       "failureMessage": null,
       "numFailingTests": 0,
       "numPassingTests": 1,
       "numPendingTests": 0,
-      "perfStats": { "end": 1529793665589, "start": 1529793664153 },
+      "perfStats": { "end": 1529937887265, "start": 1529937887062 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -47,13 +91,57 @@
       "testResults": [
         {
           "ancestorTitles": ["App"],
-          "duration": 8,
+          "duration": 6,
           "failureMessages": [],
           "fullName": "App renders",
           "location": null,
           "numPassingAsserts": 0,
           "status": "passed",
           "title": "renders"
+        }
+      ],
+      "sourceMaps": {},
+      "skipped": false,
+      "leaks": false
+    },
+    {
+      "console": [],
+      "failureMessage": null,
+      "numFailingTests": 0,
+      "numPassingTests": 2,
+      "numPendingTests": 0,
+      "perfStats": { "end": 1529937887469, "start": 1529937887301 },
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "unmatched": 0,
+        "updated": 0,
+        "uncheckedKeys": []
+      },
+      "testFilePath":
+        "/Users/pataruco/Development/pod-ui/src/state/user/actions.test.ts",
+      "testResults": [
+        {
+          "ancestorTitles": ["user actions", "endDataFetch"],
+          "duration": 2,
+          "failureMessages": [],
+          "fullName": "user actions endDataFetch returns a standard action",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "returns a standard action"
+        },
+        {
+          "ancestorTitles": ["user actions", "endDataFetch"],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "user actions endDataFetch returns a standard action",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "returns a standard action"
         }
       ],
       "sourceMaps": {},
