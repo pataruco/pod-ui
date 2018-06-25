@@ -1,23 +1,36 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import rootReducer from './reducers';
+import { connect, Provider } from 'react-redux';
+import { getStore } from 'state/store';
 // @ts-ignore
 import styles from './style.css';
 
-const store = createStore(rootReducer);
+interface Props {
+  loading: boolean;
+}
 
-class App extends Component {
+const store = getStore();
+
+export class AppComponent extends Component<Props> {
   public render() {
     return (
-      <Provider store={store}>
-        <div className={styles.app}>
-          <h1> Hola, World! </h1>
-        </div>
-      </Provider>
+      <div className={styles.app}>
+        <h1> Hola, World! </h1>
+      </div>
     );
   }
 }
 
-export default hot(module)(App);
+export const mapStateToProps = ({ user: { loading } }: State) => ({
+  loading,
+});
+
+const ConnectedApp = connect(mapStateToProps)(AppComponent);
+
+const WrappedApp = () => (
+  <Provider store={store}>
+    <ConnectedApp />
+  </Provider>
+);
+
+export default hot(module)(WrappedApp);
