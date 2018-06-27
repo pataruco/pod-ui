@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { dispatch } from 'redux';
+import { connect, dispatch } from 'react-redux';
 import { fetchData } from 'state/user/actions';
 
 interface Props {
@@ -10,7 +9,7 @@ interface Props {
 class HeaderComponent extends Component<Props> {
   public componentWillMount() {
     // todo
-    // return this.props.fetchDataFn;
+    return this.props.fetchDataFn;
   }
 
   public render() {
@@ -22,9 +21,9 @@ class HeaderComponent extends Component<Props> {
   }
 }
 
-const mapDispatchToProps = {
-  fetchDataFn: dispatch(fetchData),
-};
+const mapDispatchToProps = (dispatchFn: typeof dispatch) => ({
+  fetchDataFn: dispatchFn(fetchData),
+});
 
 const ConnectedHeader = connect(
   undefined,
