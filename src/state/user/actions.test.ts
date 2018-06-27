@@ -1,5 +1,5 @@
 import { isFSA } from 'flux-standard-action';
-import { endDataFetch, startDataFetch } from './actions';
+import { endDataFetch, saveData, startDataFetch } from './actions';
 
 describe('user actions', () => {
   describe('endDataFetch', () => {
@@ -11,6 +11,12 @@ describe('user actions', () => {
   describe('endDataFetch', () => {
     it('returns a standard action', () => {
       expect(isFSA(startDataFetch())).toBe(true);
+    });
+  });
+
+  describe('saveData', () => {
+    it('returns a standard action', () => {
+      expect(isFSA(saveData())).toBe(true);
     });
   });
 });
