@@ -7,11 +7,11 @@ export const startDataFetch = createAction(START_DATA_FETCH);
 const podData =
   'https://peter-of-the-day.s3.amazonaws.com/production/manifest/manifest.json';
 
-export const fetchData = async () => {
-  // console.log('fetchData');
+export const fetchData = async (fetchFn = fetch) => {
   try {
     const request = await fetch(podData);
     const response = await request.json();
+    // console.log(response);
   } catch (error) {
     throw new Error(error);
   }

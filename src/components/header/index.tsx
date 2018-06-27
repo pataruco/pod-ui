@@ -6,9 +6,8 @@ interface Props {
   fetchDataFn: typeof dispatch;
 }
 
-class HeaderComponent extends Component<Props> {
+export class HeaderComponent extends Component<Props> {
   public componentWillMount() {
-    // todo
     return this.props.fetchDataFn;
   }
 
@@ -21,7 +20,7 @@ class HeaderComponent extends Component<Props> {
   }
 }
 
-const mapDispatchToProps = (dispatchFn: typeof dispatch) => ({
+const mapDispatchToProps = dispatchFn => ({
   fetchDataFn: dispatchFn(fetchData),
 });
 

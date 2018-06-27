@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Connected header renders 1`] = `<Connect(HeaderComponent) />`;
+
+exports[`HeaderComponent renders 1`] = `
+<header>
+  <h1>
+    I am the header
+  </h1>
+</header>
+`;

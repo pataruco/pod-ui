@@ -1,30 +1,30 @@
 {
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
-  "numPassedTestSuites": 3,
-  "numPassedTests": 5,
+  "numPassedTestSuites": 4,
+  "numPassedTests": 7,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
-  "numTotalTestSuites": 3,
-  "numTotalTests": 5,
+  "numTotalTestSuites": 4,
+  "numTotalTests": 7,
   "openHandles": [],
   "snapshot": {
-    "added": 0,
-    "didUpdate": true,
+    "added": 1,
+    "didUpdate": false,
     "failure": false,
-    "filesAdded": 0,
+    "filesAdded": 1,
     "filesRemoved": 0,
     "filesUnmatched": 0,
     "filesUpdated": 0,
-    "matched": 1,
-    "total": 1,
+    "matched": 2,
+    "total": 3,
     "unchecked": 0,
     "uncheckedKeysByFile": [],
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1529937884844,
+  "startTime": 1530132580330,
   "success": true,
   "testResults": [
     {
@@ -33,7 +33,7 @@
       "numFailingTests": 0,
       "numPassingTests": 2,
       "numPendingTests": 0,
-      "perfStats": { "end": 1529937887025, "start": 1529937885424 },
+      "perfStats": { "end": 1530132582667, "start": 1530132581082 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -48,7 +48,7 @@
       "testResults": [
         {
           "ancestorTitles": ["User reducer", "START_DATA_FETCH"],
-          "duration": 3,
+          "duration": 4,
           "failureMessages": [],
           "fullName": "User reducer START_DATA_FETCH set loading state to true",
           "location": null,
@@ -75,42 +75,9 @@
       "console": [],
       "failureMessage": null,
       "numFailingTests": 0,
-      "numPassingTests": 1,
-      "numPendingTests": 0,
-      "perfStats": { "end": 1529937887265, "start": 1529937887062 },
-      "snapshot": {
-        "added": 0,
-        "fileDeleted": false,
-        "matched": 1,
-        "unchecked": 0,
-        "unmatched": 0,
-        "updated": 0,
-        "uncheckedKeys": []
-      },
-      "testFilePath": "/Users/pataruco/Development/pod-ui/src/app/app.test.tsx",
-      "testResults": [
-        {
-          "ancestorTitles": ["App"],
-          "duration": 6,
-          "failureMessages": [],
-          "fullName": "App renders",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "renders"
-        }
-      ],
-      "sourceMaps": {},
-      "skipped": false,
-      "leaks": false
-    },
-    {
-      "console": [],
-      "failureMessage": null,
-      "numFailingTests": 0,
       "numPassingTests": 2,
       "numPendingTests": 0,
-      "perfStats": { "end": 1529937887469, "start": 1529937887301 },
+      "perfStats": { "end": 1530132582955, "start": 1530132582721 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -135,13 +102,90 @@
         },
         {
           "ancestorTitles": ["user actions", "endDataFetch"],
-          "duration": 0,
+          "duration": 1,
           "failureMessages": [],
           "fullName": "user actions endDataFetch returns a standard action",
           "location": null,
           "numPassingAsserts": 0,
           "status": "passed",
           "title": "returns a standard action"
+        }
+      ],
+      "sourceMaps": {},
+      "skipped": false,
+      "leaks": false
+    },
+    {
+      "console": [],
+      "failureMessage": null,
+      "numFailingTests": 0,
+      "numPassingTests": 1,
+      "numPendingTests": 0,
+      "perfStats": { "end": 1530132583304, "start": 1530132583046 },
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 1,
+        "unchecked": 0,
+        "unmatched": 0,
+        "updated": 0,
+        "uncheckedKeys": []
+      },
+      "testFilePath": "/Users/pataruco/Development/pod-ui/src/app/app.test.tsx",
+      "testResults": [
+        {
+          "ancestorTitles": ["App"],
+          "duration": 8,
+          "failureMessages": [],
+          "fullName": "App renders",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "renders"
+        }
+      ],
+      "sourceMaps": {},
+      "skipped": false,
+      "leaks": false
+    },
+    {
+      "console": [],
+      "failureMessage": null,
+      "numFailingTests": 0,
+      "numPassingTests": 2,
+      "numPendingTests": 0,
+      "perfStats": { "end": 1530132583580, "start": 1530132583362 },
+      "snapshot": {
+        "added": 1,
+        "fileDeleted": false,
+        "matched": 1,
+        "unchecked": 0,
+        "unmatched": 0,
+        "updated": 0,
+        "uncheckedKeys": []
+      },
+      "testFilePath":
+        "/Users/pataruco/Development/pod-ui/src/components/header/index.test.tsx",
+      "testResults": [
+        {
+          "ancestorTitles": ["HeaderComponent"],
+          "duration": 2,
+          "failureMessages": [],
+          "fullName": "HeaderComponent renders",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "renders"
+        },
+        {
+          "ancestorTitles": ["Connected header"],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "Connected header renders",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "renders"
         }
       ],
       "sourceMaps": {},
