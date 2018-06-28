@@ -8,13 +8,16 @@ export const endDataFetch = createAction(END_DATA_FETCH);
 export const startDataFetch = createAction(START_DATA_FETCH);
 export const saveData = createAction(SAVE_DATA);
 
-const podData =
+export const podData =
   'https://peter-of-the-day.s3.amazonaws.com/production/manifest/manifest.json';
 
-export const fetchData = async (dispatchFn = dispatch, _, fetchFn = fetch) => {
+export const fetchData = async (
+  dispatchFn = dispatch,
+  _,
+  fetchFn = window.fetch,
+) => {
   try {
-    const request = await fetchFn(podData);
-    const data = await request.json();
+    const data = await fetchFn(podData).then(response => response.json());
     dispatchFn(saveData(data));
     return dispatchFn(endDataFetch());
   } catch (error) {

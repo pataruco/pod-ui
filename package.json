@@ -50,6 +50,7 @@
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.1.0",
+    "jest-fetch-mock": "^1.6.5",
     "jsdom": "^11.11.0",
     "lint-staged": "^7.2.0",
     "postcss-flexbugs-fixes": "^3.3.1",
@@ -98,8 +99,7 @@
     "redux": "^4.0.0",
     "redux-actions": "^2.4.0",
     "redux-thunk": "^2.3.0",
-    "typings-for-css-modules-loader": "^1.7.0",
-    "whatwg-fetch": "^2.0.4"
+    "typings-for-css-modules-loader": "^1.7.0"
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
@@ -111,14 +111,14 @@
       "git add"
     ]
   },
-  "jest": {
+  "jest": { 
     "testResultsProcessor": "./tests/json-reporter.js",
     "collectCoverageFrom": [
       "!src/**/*.d.ts",
       "src/**/*.{js,jsx,ts,tsx}"
     ],
     "setupFiles": [
-      "<rootDir>/config/polyfills.js"
+      "<rootDir>/config/jest/index.js"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"

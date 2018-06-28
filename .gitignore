@@ -4,6 +4,7 @@ node_modules
 # testing
 tests/results.json*
 results.json*
+tests/results.json
 
 
 # production
