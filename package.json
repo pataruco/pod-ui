@@ -111,7 +111,7 @@
       "git add"
     ]
   },
-  "jest": { 
+  "jest": {
     "testResultsProcessor": "./tests/json-reporter.js",
     "collectCoverageFrom": [
       "!src/**/*.d.ts",
