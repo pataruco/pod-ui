@@ -9,13 +9,13 @@ export const saveData = createAction(SAVE_DATA);
 const podData =
   'https://peter-of-the-day.s3.amazonaws.com/production/manifest/manifest.json';
 
-export const fetchData = async (fetchFn = fetch, dispatch) => {
+export const fetchData = async (dispatchFn = dispatch, _, fetchFn = fetch) => {
   try {
     const request = await fetch(podData);
     const data = await request.json();
     // console.log(data);
 
-    dispatch(saveData(data));
+    // dispatch(saveData(data));
   } catch (error) {
     throw new Error(error);
   }
