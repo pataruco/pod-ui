@@ -1,3 +1,5 @@
+// @ts-ignore
+import { dispatch } from 'redux';
 import { createAction } from 'redux-actions';
 import 'whatwg-fetch';
 import { END_DATA_FETCH, SAVE_DATA, START_DATA_FETCH } from './action-types';
@@ -11,12 +13,13 @@ const podData =
 
 export const fetchData = async (dispatchFn = dispatch, _, fetchFn = fetch) => {
   try {
-    const request = await fetch(podData);
+    const request = await fetchFn(podData);
     const data = await request.json();
-    // console.log(data);
-
-    // dispatch(saveData(data));
+    dispatchFn(saveData(data));
+    return dispatchFn(endDataFetch());
   } catch (error) {
-    throw new Error(error);
+    // tslint:disable-next-line no-console
+    console.error(error);
+    return dispatchFn(endDataFetch());
   }
 };
