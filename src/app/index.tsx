@@ -1,3 +1,4 @@
+import Header from 'components/header';
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import { connect, Provider } from 'react-redux';
@@ -16,7 +17,8 @@ export class AppComponent extends Component<Props> {
   public render() {
     return (
       <div className={styles.app}>
-        <h1> Hola, World! </h1>
+        <h1> Hola, World </h1>
+        <Header />
       </div>
     );
   }
