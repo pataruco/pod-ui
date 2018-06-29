@@ -2,12 +2,12 @@
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
   "numPassedTestSuites": 4,
-  "numPassedTests": 11,
+  "numPassedTests": 12,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTotalTestSuites": 4,
-  "numTotalTests": 11,
+  "numTotalTests": 12,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -24,7 +24,7 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1530299782559,
+  "startTime": 1530300237674,
   "success": true,
   "testResults": [
     {
@@ -33,7 +33,7 @@
       "numFailingTests": 0,
       "numPassingTests": 6,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530299785048, "start": 1530299784212 },
+      "perfStats": { "end": 1530300239624, "start": 1530300239334 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -48,7 +48,7 @@
       "testResults": [
         {
           "ancestorTitles": ["user actions", "endDataFetch"],
-          "duration": 3,
+          "duration": 4,
           "failureMessages": [],
           "fullName": "user actions endDataFetch returns a standard action",
           "location": null,
@@ -58,7 +58,7 @@
         },
         {
           "ancestorTitles": ["user actions", "endDataFetch"],
-          "duration": 1,
+          "duration": 0,
           "failureMessages": [],
           "fullName": "user actions endDataFetch returns a standard action",
           "location": null,
@@ -68,7 +68,7 @@
         },
         {
           "ancestorTitles": ["user actions", "saveData"],
-          "duration": 0,
+          "duration": 1,
           "failureMessages": [],
           "fullName": "user actions saveData returns a standard action",
           "location": null,
@@ -128,7 +128,7 @@
       "numFailingTests": 0,
       "numPassingTests": 1,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530299785449, "start": 1530299785246 },
+      "perfStats": { "end": 1530300240552, "start": 1530300239822 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -161,7 +161,7 @@
       "numFailingTests": 0,
       "numPassingTests": 2,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530299785682, "start": 1530299785651 },
+      "perfStats": { "end": 1530300240784, "start": 1530300240752 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -176,7 +176,7 @@
       "testResults": [
         {
           "ancestorTitles": ["HeaderComponent"],
-          "duration": 3,
+          "duration": 2,
           "failureMessages": [],
           "fullName": "HeaderComponent renders",
           "location": null,
@@ -203,9 +203,9 @@
       "console": [],
       "failureMessage": null,
       "numFailingTests": 0,
-      "numPassingTests": 2,
+      "numPassingTests": 3,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530299785896, "start": 1530299785876 },
+      "perfStats": { "end": 1530300241052, "start": 1530300240966 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -220,7 +220,7 @@
       "testResults": [
         {
           "ancestorTitles": ["User reducer", "START_DATA_FETCH"],
-          "duration": 1,
+          "duration": 2,
           "failureMessages": [],
           "fullName": "User reducer START_DATA_FETCH set loading state to true",
           "location": null,
@@ -237,6 +237,16 @@
           "numPassingAsserts": 0,
           "status": "passed",
           "title": "set loading state to true"
+        },
+        {
+          "ancestorTitles": ["User reducer", "SAVE_DATA"],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "User reducer SAVE_DATA save data",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "save data"
         }
       ],
       "sourceMaps": {},
