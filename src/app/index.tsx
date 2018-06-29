@@ -1,3 +1,4 @@
+import Calendar from 'components/calendar';
 import Header from 'components/header';
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
@@ -19,6 +20,7 @@ export class AppComponent extends Component<Props> {
       <div className={styles.app}>
         <h1> Hola, World </h1>
         <Header />
+        <Calendar />
       </div>
     );
   }

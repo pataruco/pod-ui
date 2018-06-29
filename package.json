@@ -92,7 +92,9 @@
   },
   "dependencies": {
     "autoprefixer": "^8.6.3",
+    "moment": "^2.22.2",
     "react": "^16.4.1",
+    "react-big-calendar": "^0.19.2",
     "react-dom": "^16.4.1",
     "react-hot-loader": "^4.3.3",
     "react-redux": "^5.0.7",
