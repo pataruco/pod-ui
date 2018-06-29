@@ -1,13 +1,13 @@
 {
-  "numFailedTestSuites": 1,
-  "numFailedTests": 1,
-  "numPassedTestSuites": 3,
-  "numPassedTests": 8,
+  "numFailedTestSuites": 0,
+  "numFailedTests": 0,
+  "numPassedTestSuites": 4,
+  "numPassedTests": 10,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTotalTestSuites": 4,
-  "numTotalTests": 9,
+  "numTotalTests": 10,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -24,17 +24,16 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1530204286956,
-  "success": false,
+  "startTime": 1530269815960,
+  "success": true,
   "testResults": [
     {
       "console": [],
-      "failureMessage":
-        "\u001b[1m\u001b[31m  \u001b[1m● \u001b[1muser actions › fetchData › when sucesfully dispatched › fetchs data from manifest.json\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).toBe(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n    Expected: \u001b[32m1\u001b[39m\n    Received: \u001b[31m2\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 45 | \u001b[39m        expect(fetch\u001b[33m.\u001b[39mmock\u001b[33m.\u001b[39mcalls\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoEqual(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 46 | \u001b[39m        expect(fetch\u001b[33m.\u001b[39mmock\u001b[33m.\u001b[39mcalls[\u001b[35m0\u001b[39m][\u001b[35m0\u001b[39m])\u001b[33m.\u001b[39mtoEqual(podData)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 47 | \u001b[39m        expect(dispatchSpy\u001b[33m.\u001b[39mmock\u001b[33m.\u001b[39mcalls\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m    | \u001b[39m                                              \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 48 | \u001b[39m      })\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 49 | \u001b[39m    })\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 50 | \u001b[39m  })\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object._callee$ (\u001b[2m\u001b[0m\u001b[36msrc/state/user/actions.test.ts\u001b[39m\u001b[0m\u001b[2m:47:47)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat tryCatch (\u001b[2m\u001b[0m\u001b[36mnode_modules/regenerator-runtime/runtime.js\u001b[39m\u001b[0m\u001b[2m:62:40)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Generator.invoke [as _invoke] (\u001b[2m\u001b[0m\u001b[36mnode_modules/regenerator-runtime/runtime.js\u001b[39m\u001b[0m\u001b[2m:296:22)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Generator.prototype.(anonymous function) [as next] (\u001b[2m\u001b[0m\u001b[36mnode_modules/regenerator-runtime/runtime.js\u001b[39m\u001b[0m\u001b[2m:114:21)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat step (\u001b[2m\u001b[0m\u001b[36msrc/state/user/actions.test.ts\u001b[39m\u001b[0m\u001b[2m:7:221)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _next (\u001b[2m\u001b[0m\u001b[36msrc/state/user/actions.test.ts\u001b[39m\u001b[0m\u001b[2m:7:409)\u001b[2m\u001b[22m\n",
-      "numFailingTests": 1,
-      "numPassingTests": 3,
+      "failureMessage": null,
+      "numFailingTests": 0,
+      "numPassingTests": 5,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530204289051, "start": 1530204288389 },
+      "perfStats": { "end": 1530269818032, "start": 1530269817381 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -59,7 +58,7 @@
         },
         {
           "ancestorTitles": ["user actions", "endDataFetch"],
-          "duration": 1,
+          "duration": 0,
           "failureMessages": [],
           "fullName": "user actions endDataFetch returns a standard action",
           "location": null,
@@ -83,16 +82,29 @@
             "fetchData",
             "when sucesfully dispatched"
           ],
-          "duration": 9,
-          "failureMessages": [
-            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).toBe(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at Object._callee$ (/Users/pataruco/Development/pod-ui/src/state/user/actions.test.ts:47:47)\n    at tryCatch (/Users/pataruco/Development/pod-ui/node_modules/regenerator-runtime/runtime.js:62:40)\n    at Generator.invoke [as _invoke] (/Users/pataruco/Development/pod-ui/node_modules/regenerator-runtime/runtime.js:296:22)\n    at Generator.prototype.(anonymous function) [as next] (/Users/pataruco/Development/pod-ui/node_modules/regenerator-runtime/runtime.js:114:21)\n    at step (/Users/pataruco/Development/pod-ui/src/state/user/actions.test.ts:7:221)\n    at _next (/Users/pataruco/Development/pod-ui/src/state/user/actions.test.ts:7:409)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
-          ],
+          "duration": 3,
+          "failureMessages": [],
           "fullName":
             "user actions fetchData when sucesfully dispatched fetchs data from manifest.json",
           "location": null,
           "numPassingAsserts": 0,
-          "status": "failed",
+          "status": "passed",
           "title": "fetchs data from manifest.json"
+        },
+        {
+          "ancestorTitles": [
+            "user actions",
+            "fetchData",
+            "when sucesfully dispatched"
+          ],
+          "duration": 2,
+          "failureMessages": [],
+          "fullName":
+            "user actions fetchData when sucesfully dispatched save data in the store and set loading",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "save data in the store and set loading"
         }
       ],
       "sourceMaps": {},
@@ -105,7 +117,7 @@
       "numFailingTests": 0,
       "numPassingTests": 1,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530204289298, "start": 1530204289241 },
+      "perfStats": { "end": 1530269818278, "start": 1530269818220 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -138,7 +150,7 @@
       "numFailingTests": 0,
       "numPassingTests": 2,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530204289491, "start": 1530204289462 },
+      "perfStats": { "end": 1530269818468, "start": 1530269818443 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -182,7 +194,7 @@
       "numFailingTests": 0,
       "numPassingTests": 2,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530204289663, "start": 1530204289646 },
+      "perfStats": { "end": 1530269818653, "start": 1530269818634 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -197,7 +209,7 @@
       "testResults": [
         {
           "ancestorTitles": ["User reducer", "START_DATA_FETCH"],
-          "duration": 2,
+          "duration": 1,
           "failureMessages": [],
           "fullName": "User reducer START_DATA_FETCH set loading state to true",
           "location": null,
@@ -207,7 +219,7 @@
         },
         {
           "ancestorTitles": ["User reducer", "END_FETCH_DATA"],
-          "duration": 0,
+          "duration": 1,
           "failureMessages": [],
           "fullName": "User reducer END_FETCH_DATA set loading state to true",
           "location": null,
