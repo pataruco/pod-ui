@@ -1,13 +1,13 @@
 {
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
-  "numPassedTestSuites": 4,
-  "numPassedTests": 13,
+  "numPassedTestSuites": 5,
+  "numPassedTests": 15,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
-  "numTotalTestSuites": 4,
-  "numTotalTests": 13,
+  "numTotalTestSuites": 5,
+  "numTotalTests": 15,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -17,14 +17,14 @@
     "filesRemoved": 0,
     "filesUnmatched": 0,
     "filesUpdated": 0,
-    "matched": 3,
-    "total": 3,
+    "matched": 4,
+    "total": 4,
     "unchecked": 0,
     "uncheckedKeysByFile": [],
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1530300399362,
+  "startTime": 1530305545910,
   "success": true,
   "testResults": [
     {
@@ -33,7 +33,7 @@
       "numFailingTests": 0,
       "numPassingTests": 1,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530300401473, "start": 1530300401005 },
+      "perfStats": { "end": 1530305547958, "start": 1530305547558 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -43,13 +43,14 @@
         "updated": 0,
         "uncheckedKeys": []
       },
-      "testFilePath": "/Users/pataruco/Development/pod-ui/src/app/app.test.tsx",
+      "testFilePath":
+        "/Users/pataruco/Development/pod-ui/src/components/calendar/index.test.tsx",
       "testResults": [
         {
-          "ancestorTitles": ["App"],
+          "ancestorTitles": ["CalendarComponent"],
           "duration": 9,
           "failureMessages": [],
-          "fullName": "App renders",
+          "fullName": "CalendarComponent renders",
           "location": null,
           "numPassingAsserts": 0,
           "status": "passed",
@@ -64,9 +65,9 @@
       "console": [],
       "failureMessage": null,
       "numFailingTests": 0,
-      "numPassingTests": 6,
+      "numPassingTests": 7,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530300401709, "start": 1530300401669 },
+      "perfStats": { "end": 1530305548228, "start": 1530305548158 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -81,7 +82,7 @@
       "testResults": [
         {
           "ancestorTitles": ["user actions", "endDataFetch"],
-          "duration": 2,
+          "duration": 1,
           "failureMessages": [],
           "fullName": "user actions endDataFetch returns a standard action",
           "location": null,
@@ -91,7 +92,7 @@
         },
         {
           "ancestorTitles": ["user actions", "endDataFetch"],
-          "duration": 1,
+          "duration": 0,
           "failureMessages": [],
           "fullName": "user actions endDataFetch returns a standard action",
           "location": null,
@@ -111,10 +112,20 @@
         },
         {
           "ancestorTitles": ["user actions", "saveDatesAsEvents"],
-          "duration": 1,
+          "duration": 0,
           "failureMessages": [],
           "fullName":
             "user actions saveDatesAsEvents returns a standard action",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "returns a standard action"
+        },
+        {
+          "ancestorTitles": ["user actions", "setDataLoaded"],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "user actions setDataLoaded returns a standard action",
           "location": null,
           "numPassingAsserts": 0,
           "status": "passed",
@@ -126,7 +137,7 @@
             "fetchData",
             "when sucesfully dispatched"
           ],
-          "duration": 4,
+          "duration": 3,
           "failureMessages": [],
           "fullName":
             "user actions fetchData when sucesfully dispatched fetchs data from manifest.json",
@@ -141,7 +152,7 @@
             "fetchData",
             "when sucesfully dispatched"
           ],
-          "duration": 5,
+          "duration": 3,
           "failureMessages": [],
           "fullName":
             "user actions fetchData when sucesfully dispatched save data in the store and set loading",
@@ -159,60 +170,29 @@
       "console": [],
       "failureMessage": null,
       "numFailingTests": 0,
-      "numPassingTests": 4,
+      "numPassingTests": 1,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530300402398, "start": 1530300401932 },
+      "perfStats": { "end": 1530305548530, "start": 1530305548475 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
-        "matched": 0,
+        "matched": 1,
         "unchecked": 0,
         "unmatched": 0,
         "updated": 0,
         "uncheckedKeys": []
       },
-      "testFilePath":
-        "/Users/pataruco/Development/pod-ui/src/state/user/reducer.test.ts",
+      "testFilePath": "/Users/pataruco/Development/pod-ui/src/app/app.test.tsx",
       "testResults": [
         {
-          "ancestorTitles": ["User reducer", "START_DATA_FETCH"],
-          "duration": 1,
+          "ancestorTitles": ["App"],
+          "duration": 3,
           "failureMessages": [],
-          "fullName": "User reducer START_DATA_FETCH set loading state to true",
+          "fullName": "App renders",
           "location": null,
           "numPassingAsserts": 0,
           "status": "passed",
-          "title": "set loading state to true"
-        },
-        {
-          "ancestorTitles": ["User reducer", "END_FETCH_DATA"],
-          "duration": 0,
-          "failureMessages": [],
-          "fullName": "User reducer END_FETCH_DATA set loading state to true",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "set loading state to true"
-        },
-        {
-          "ancestorTitles": ["User reducer", "SAVE_DATA"],
-          "duration": 0,
-          "failureMessages": [],
-          "fullName": "User reducer SAVE_DATA save data",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "save data"
-        },
-        {
-          "ancestorTitles": ["User reducer", "SAVE_DATES_AS_EVENTS"],
-          "duration": 0,
-          "failureMessages": [],
-          "fullName": "User reducer SAVE_DATES_AS_EVENTS save dates events",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "save dates events"
+          "title": "renders"
         }
       ],
       "sourceMaps": {},
@@ -225,7 +205,7 @@
       "numFailingTests": 0,
       "numPassingTests": 2,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530300402624, "start": 1530300402596 },
+      "perfStats": { "end": 1530305548751, "start": 1530305548724 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -257,6 +237,70 @@
           "numPassingAsserts": 0,
           "status": "passed",
           "title": "renders"
+        }
+      ],
+      "sourceMaps": {},
+      "skipped": false,
+      "leaks": false
+    },
+    {
+      "console": [],
+      "failureMessage": null,
+      "numFailingTests": 0,
+      "numPassingTests": 4,
+      "numPendingTests": 0,
+      "perfStats": { "end": 1530305548953, "start": 1530305548934 },
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "unmatched": 0,
+        "updated": 0,
+        "uncheckedKeys": []
+      },
+      "testFilePath":
+        "/Users/pataruco/Development/pod-ui/src/state/user/reducer.test.ts",
+      "testResults": [
+        {
+          "ancestorTitles": ["User reducer", "START_DATA_FETCH"],
+          "duration": 2,
+          "failureMessages": [],
+          "fullName": "User reducer START_DATA_FETCH set loading state to true",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "set loading state to true"
+        },
+        {
+          "ancestorTitles": ["User reducer", "END_FETCH_DATA"],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "User reducer END_FETCH_DATA set loading state to true",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "set loading state to true"
+        },
+        {
+          "ancestorTitles": ["User reducer", "SAVE_DATA"],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "User reducer SAVE_DATA save data",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "save data"
+        },
+        {
+          "ancestorTitles": ["User reducer", "SAVE_DATES_AS_EVENTS"],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "User reducer SAVE_DATES_AS_EVENTS save dates events",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "save dates events"
         }
       ],
       "sourceMaps": {},

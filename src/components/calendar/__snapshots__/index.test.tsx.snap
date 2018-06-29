@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CalendarComponent renders 1`] = `
+<section>
+  <Uncontrolled(Calendar)
+    events={Object {}}
+    onSelectEvent={[Function]}
+    selectable={false}
+    views={
+      Array [
+        "month",
+      ]
+    }
+  />
+</section>
+`;

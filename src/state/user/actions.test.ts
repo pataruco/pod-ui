@@ -7,6 +7,7 @@ import {
   podData,
   saveData,
   saveDatesAsEvents,
+  setDataLoaded,
   startDataFetch,
 } from './actions';
 
@@ -32,6 +33,12 @@ describe('user actions', () => {
   describe('saveDatesAsEvents', () => {
     it('returns a standard action', () => {
       expect(isFSA(saveDatesAsEvents())).toBe(true);
+    });
+  });
+
+  describe('setDataLoaded', () => {
+    it('returns a standard action', () => {
+      expect(isFSA(setDataLoaded())).toBe(true);
     });
   });
 
@@ -73,9 +80,10 @@ describe('user actions', () => {
         await fetchData(dispatchSpy, fetch);
         const datesAsEvents = getDatesAsEvents(data);
 
-        expect(dispatchSpy).toHaveBeenCalledTimes(3);
+        expect(dispatchSpy).toHaveBeenCalledTimes(4);
         expect(dispatchSpy).toHaveBeenCalledWith(saveData(data));
         expect(dispatchSpy).toHaveBeenCalledWith(endDataFetch());
+        expect(dispatchSpy).toHaveBeenCalledWith(setDataLoaded());
         expect(dispatchSpy).toHaveBeenCalledWith(
           saveDatesAsEvents(datesAsEvents),
         );
