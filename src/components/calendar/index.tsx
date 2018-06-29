@@ -1,7 +1,7 @@
+import '!style-loader!css-loader!./calendar.css';
 import moment from 'moment';
 import React, { Component } from 'react';
 import BigCalendar from 'react-big-calendar';
-import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 BigCalendar.momentLocalizer(moment);
 
@@ -23,7 +23,7 @@ class Calendar extends Component {
 
   public render() {
     return (
-      <section>
+      <section className={styles.calendarWrapper}>
         <BigCalendar
           events={this.events}
           selectable={false}
