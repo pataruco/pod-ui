@@ -47,4 +47,21 @@ describe('User reducer', () => {
       });
     });
   });
+
+  describe('SAVE_DATES_AS_EVENTS', () => {
+    it('save dates events', () => {
+      const dates = {
+        start: '2018-06-29',
+        end: 'eventDate',
+        title: 1,
+        files: [],
+      };
+      expect(
+        userReducer({ ...defaultState }, saveDatesAsEvents(dates)),
+      ).toEqual({
+        ...defaultState,
+        dates,
+      });
+    });
+  });
 });
