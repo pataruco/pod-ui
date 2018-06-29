@@ -24,7 +24,7 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1530305545910,
+  "startTime": 1530306031118,
   "success": true,
   "testResults": [
     {
@@ -33,7 +33,7 @@
       "numFailingTests": 0,
       "numPassingTests": 1,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530305547958, "start": 1530305547558 },
+      "perfStats": { "end": 1530306033157, "start": 1530306032757 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -67,7 +67,7 @@
       "numFailingTests": 0,
       "numPassingTests": 7,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530305548228, "start": 1530305548158 },
+      "perfStats": { "end": 1530306033928, "start": 1530306033352 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -102,7 +102,7 @@
         },
         {
           "ancestorTitles": ["user actions", "saveData"],
-          "duration": 0,
+          "duration": 1,
           "failureMessages": [],
           "fullName": "user actions saveData returns a standard action",
           "location": null,
@@ -137,7 +137,7 @@
             "fetchData",
             "when sucesfully dispatched"
           ],
-          "duration": 3,
+          "duration": 4,
           "failureMessages": [],
           "fullName":
             "user actions fetchData when sucesfully dispatched fetchs data from manifest.json",
@@ -152,7 +152,7 @@
             "fetchData",
             "when sucesfully dispatched"
           ],
-          "duration": 3,
+          "duration": 5,
           "failureMessages": [],
           "fullName":
             "user actions fetchData when sucesfully dispatched save data in the store and set loading",
@@ -172,7 +172,7 @@
       "numFailingTests": 0,
       "numPassingTests": 1,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530305548530, "start": 1530305548475 },
+      "perfStats": { "end": 1530306034184, "start": 1530306034124 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -205,7 +205,7 @@
       "numFailingTests": 0,
       "numPassingTests": 2,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530305548751, "start": 1530305548724 },
+      "perfStats": { "end": 1530306034391, "start": 1530306034364 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -249,7 +249,7 @@
       "numFailingTests": 0,
       "numPassingTests": 4,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530305548953, "start": 1530305548934 },
+      "perfStats": { "end": 1530306034594, "start": 1530306034569 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,

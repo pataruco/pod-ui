@@ -20,16 +20,9 @@ export const setDataLoaded = createAction(SET_DATA_LOADED);
 export const podData =
   'https://peter-of-the-day.s3.amazonaws.com/production/manifest/manifest.json';
 
-export const getEventDate = date => {
-  const y = date.date.split('-')[0];
-  const m = date.date.split('-')[1];
-  const d = date.date.split('-')[2];
-  return new Date(y, m, d);
-};
-
 export const getDatesAsEvents = data => {
   return data.dates.map(date => {
-    const eventDate = getEventDate(date);
+    const eventDate = moment(date.date, 'YYYY-MM-DD');
     return {
       start: eventDate,
       end: eventDate,
