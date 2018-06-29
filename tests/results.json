@@ -2,12 +2,12 @@
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
   "numPassedTestSuites": 4,
-  "numPassedTests": 10,
+  "numPassedTests": 11,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTotalTestSuites": 4,
-  "numTotalTests": 10,
+  "numTotalTests": 11,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -24,16 +24,16 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1530269815960,
+  "startTime": 1530299782559,
   "success": true,
   "testResults": [
     {
       "console": [],
       "failureMessage": null,
       "numFailingTests": 0,
-      "numPassingTests": 5,
+      "numPassingTests": 6,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530269818032, "start": 1530269817381 },
+      "perfStats": { "end": 1530299785048, "start": 1530299784212 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -58,7 +58,7 @@
         },
         {
           "ancestorTitles": ["user actions", "endDataFetch"],
-          "duration": 0,
+          "duration": 1,
           "failureMessages": [],
           "fullName": "user actions endDataFetch returns a standard action",
           "location": null,
@@ -77,12 +77,23 @@
           "title": "returns a standard action"
         },
         {
+          "ancestorTitles": ["user actions", "saveDatesAsEvents"],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName":
+            "user actions saveDatesAsEvents returns a standard action",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "returns a standard action"
+        },
+        {
           "ancestorTitles": [
             "user actions",
             "fetchData",
             "when sucesfully dispatched"
           ],
-          "duration": 3,
+          "duration": 4,
           "failureMessages": [],
           "fullName":
             "user actions fetchData when sucesfully dispatched fetchs data from manifest.json",
@@ -97,7 +108,7 @@
             "fetchData",
             "when sucesfully dispatched"
           ],
-          "duration": 2,
+          "duration": 5,
           "failureMessages": [],
           "fullName":
             "user actions fetchData when sucesfully dispatched save data in the store and set loading",
@@ -117,7 +128,7 @@
       "numFailingTests": 0,
       "numPassingTests": 1,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530269818278, "start": 1530269818220 },
+      "perfStats": { "end": 1530299785449, "start": 1530299785246 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -131,7 +142,7 @@
       "testResults": [
         {
           "ancestorTitles": ["App"],
-          "duration": 6,
+          "duration": 8,
           "failureMessages": [],
           "fullName": "App renders",
           "location": null,
@@ -150,7 +161,7 @@
       "numFailingTests": 0,
       "numPassingTests": 2,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530269818468, "start": 1530269818443 },
+      "perfStats": { "end": 1530299785682, "start": 1530299785651 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
@@ -165,7 +176,7 @@
       "testResults": [
         {
           "ancestorTitles": ["HeaderComponent"],
-          "duration": 2,
+          "duration": 3,
           "failureMessages": [],
           "fullName": "HeaderComponent renders",
           "location": null,
@@ -194,7 +205,7 @@
       "numFailingTests": 0,
       "numPassingTests": 2,
       "numPendingTests": 0,
-      "perfStats": { "end": 1530269818653, "start": 1530269818634 },
+      "perfStats": { "end": 1530299785896, "start": 1530299785876 },
       "snapshot": {
         "added": 0,
         "fileDeleted": false,

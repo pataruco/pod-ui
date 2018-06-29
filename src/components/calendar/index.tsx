@@ -1,21 +1,19 @@
 import moment from 'moment';
 import React, { Component } from 'react';
 import BigCalendar from 'react-big-calendar';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
 
-BigCalendar.setLocalizer(BigCalendar.momentLocalizer(moment));
+BigCalendar.momentLocalizer(moment);
 
 class Calendar extends Component {
-  private views = {
-    month: true,
-    week: false,
-    agenda: false,
-  };
+  private views = ['month'];
 
   private events = [
     {
       start: new Date(),
       end: new Date(),
       title: 'Some title',
+      files: ['banana', 'orangess'],
     },
   ];
 
@@ -28,12 +26,9 @@ class Calendar extends Component {
       <section>
         <BigCalendar
           events={this.events}
-          defaultView="month"
           selectable={false}
           views={this.views}
           onSelectEvent={this.handleSelectEvent}
-          // startAccessor="startDate"
-          // endAccessor="endDate"
         />
       </section>
     );
