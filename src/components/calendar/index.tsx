@@ -22,6 +22,8 @@ export class CalendarComponent extends Component<Props> {
 
   public handleSelectEvent = event => {
     if (event) {
+      // console.log(event.date);
+
       return this.props.renderModalFn();
     }
   };
