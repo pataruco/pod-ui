@@ -3,8 +3,11 @@ import { isFSA } from 'flux-standard-action';
 import {
   endDataFetch,
   fetchData,
+  getDatesAsEvents,
   podData,
   saveData,
+  saveDatesAsEvents,
+  setDataLoaded,
   startDataFetch,
 } from './actions';
 
@@ -24,6 +27,18 @@ describe('user actions', () => {
   describe('saveData', () => {
     it('returns a standard action', () => {
       expect(isFSA(saveData())).toBe(true);
+    });
+  });
+
+  describe('saveDatesAsEvents', () => {
+    it('returns a standard action', () => {
+      expect(isFSA(saveDatesAsEvents())).toBe(true);
+    });
+  });
+
+  describe('setDataLoaded', () => {
+    it('returns a standard action', () => {
+      expect(isFSA(setDataLoaded())).toBe(true);
     });
   });
 
@@ -51,17 +66,27 @@ describe('user actions', () => {
       it('save data in the store and set loading', async () => {
         const data = {
           updated: 'somedate',
-          dates: [],
+          dates: [
+            {
+              date: '2018-06-29',
+              files: [],
+            },
+          ],
         };
 
         fetch.mockResponseOnce(JSON.stringify(data));
 
         const dispatchSpy = jest.fn();
         await fetchData(dispatchSpy, fetch);
+        const datesAsEvents = getDatesAsEvents(data);
 
-        expect(dispatchSpy).toHaveBeenCalledTimes(2);
+        expect(dispatchSpy).toHaveBeenCalledTimes(4);
         expect(dispatchSpy).toHaveBeenCalledWith(saveData(data));
         expect(dispatchSpy).toHaveBeenCalledWith(endDataFetch());
+        expect(dispatchSpy).toHaveBeenCalledWith(setDataLoaded());
+        expect(dispatchSpy).toHaveBeenCalledWith(
+          saveDatesAsEvents(datesAsEvents),
+        );
       });
     });
   });
