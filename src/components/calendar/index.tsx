@@ -43,10 +43,7 @@ export class CalendarComponent extends Component<Props> {
   }
 }
 
-const renderModal = renderModalFn => event => {
-  if (event) {
-    event.preventDefault();
-  }
+const renderModal = renderModalFn => () => {
   return renderModalFn();
 };
 

@@ -1,6 +1,6 @@
 // @ts-ignore
 import moment from 'moment';
-// import { dispatch } from 'redux';
+import { dispatch } from 'redux';
 import { createAction } from 'redux-actions';
 import 'whatwg-fetch';
 import {
@@ -27,6 +27,7 @@ export const getDatesAsEvents = data => {
       start: eventDate,
       end: eventDate,
       title: `${date.files.length}`,
+      date: date.date,
     };
   });
 };
