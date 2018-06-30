@@ -27,7 +27,6 @@ export const getDatesAsEvents = data => {
       start: eventDate,
       end: eventDate,
       title: `${date.files.length}`,
-      files: date.files,
     };
   });
 };
