@@ -1,9 +1,8 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import Modal from 'react-modal';
+import { Provider } from 'react-redux';
+import configureStore from 'redux-mock-store';
 import ConnectedModal, { ModalComponent } from './index';
-
-// Modal.setAppElement('#root');
 
 describe('ModalComponent', () => {
   const defaultProps = {
@@ -14,5 +13,24 @@ describe('ModalComponent', () => {
 
   it('renders', () => {
     expect(shallow(<ModalComponent {...defaultProps} />)).toMatchSnapshot();
+  });
+});
+
+describe('ConnectedModal', () => {
+  const defaultProps = {
+    isModalOpen: true,
+    date: 'somedate',
+    files: [],
+  };
+
+  it('renders', () => {
+    const store = configureStore([])({});
+    expect(
+      shallow(
+        <Provider store={store}>
+          <ConnectedModal {...defaultProps} />
+        </Provider>,
+      ),
+    ).toMatchSnapshot();
   });
 });
