@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carrousel render 1`] = `
+<Slider
+  dots={true}
+  infinite={true}
+  slidesToScroll={1}
+  slidesToShow={1}
+  speed={500}
+>
+  <h3>
+    <time>
+      somedate
+    </time>
+  </h3>
+  <Slide
+    date="somedate"
+    file={
+      Object {
+        "url": "someurl",
+      }
+    }
+    key="someurl"
+  />
+</Slider>
+`;
+
+exports[`Slide render 1`] = `
+<article>
+  <img
+    alt="Peter on somedate"
+    src="https://peter-of-the-day.s3.amazonaws.com/someurl"
+  />
+</article>
+`;
