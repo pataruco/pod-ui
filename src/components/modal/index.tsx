@@ -9,7 +9,7 @@ import { closeModal } from 'state/modal/actions';
 interface Props {
   isModalOpen: boolean;
   clearDateFn?: typeof dispatch;
-  hideModalFn?: () => void;
+  hideModalFn?: typeof dispatch;
   date: string;
   files: any[];
 }
