@@ -23,7 +23,7 @@ describe('modal actions', () => {
         renderModal(dispatchSpy);
 
         expect(dispatchSpy).toHaveBeenCalledTimes(1);
-        // expect(dispatchSpy).toHaveBeenCalledWith(openModal());
+        expect(dispatchSpy).toHaveBeenCalledWith(openModal);
       });
     });
   });
