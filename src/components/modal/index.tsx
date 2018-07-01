@@ -5,6 +5,7 @@ import Modal from 'react-modal';
 import { connect, dispatch } from 'react-redux';
 import { clearDate } from 'state/date/actions';
 import { closeModal } from 'state/modal/actions';
+import styles from './style.css';
 
 interface Props {
   isModalOpen: boolean;
@@ -32,10 +33,11 @@ export class ModalComponent extends Component<Props> {
     const { date, files, isModalOpen } = this.props;
     return (
       <Modal
+        className={styles.modal}
+        contentLabel="Example Modal"
         isOpen={isModalOpen}
         onRequestClose={this.handleClose}
-        // style={customStyles}
-        contentLabel="Example Modal"
+        overlayClassName={styles.overlay}
       >
         <button onClick={this.handleClose}>close</button>
         <Slider date={date} files={files} />
