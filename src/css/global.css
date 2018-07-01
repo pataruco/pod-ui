@@ -1,0 +1,29 @@
+:global * {
+  box-sizing: border-box;
+  transition: 0.25s all ease;
+}
+
+:global html {
+  font-size: 62.5%;
+  overflow-y: scroll;
+  /* This is to prevent font-sizes scale on iOS devices https://stackoverflow.com/a/2711132 */
+  text-size-adjust: 100%;
+}
+
+:global img,
+:global svg {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+:global a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+:global button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

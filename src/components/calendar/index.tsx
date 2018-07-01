@@ -5,6 +5,7 @@ import BigCalendar from 'react-big-calendar';
 import { connect } from 'react-redux';
 import { saveDate } from 'state/date/actions';
 import { openModal } from 'state/modal/actions';
+import styles from './style.css';
 
 BigCalendar.momentLocalizer(moment);
 
@@ -32,7 +33,7 @@ export class CalendarComponent extends Component<Props> {
   public render() {
     const { dates, dataIsLoaded } = this.props;
     return (
-      <section>
+      <section className={styles.calendarWrapper}>
         {dataIsLoaded && (
           <BigCalendar
             events={dates}

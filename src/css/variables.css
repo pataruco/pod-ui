@@ -1,0 +1,13 @@
+/* viewport sizes */
+@custom-media --small-viewport (max-width: 600px);
+@custom-media --medium-viewport (min-width: 601px);
+@custom-media --large-viewport (min-width: 841px);
+@custom-media --xlarge-viewport (min-width: 1021px);
+
+:root {
+  /* colours */
+  --black: #000;
+  --primary: #00b229;
+  --secondary: #ff0019;
+  --base-padding: 1.6rem;
+}

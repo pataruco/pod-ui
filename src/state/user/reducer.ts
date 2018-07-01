@@ -7,9 +7,22 @@ import {
   START_DATA_FETCH,
 } from './action-types';
 
-export const defaultState = {
+interface UserState {
+  loading: boolean;
+  dataIsLoaded: boolean;
+  data: {
+    updated: string;
+    files: any[];
+  };
+}
+
+export const defaultState: UserState = {
   loading: false,
   dataIsLoaded: false,
+  data: {
+    updated: '',
+    files: [],
+  },
 };
 
 export default handleActions(

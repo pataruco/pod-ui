@@ -6,7 +6,6 @@ import { hot } from 'react-hot-loader';
 import { connect, Provider } from 'react-redux';
 import { getStore } from 'state/store';
 import { State } from 'types/state';
-// @ts-ignore
 import styles from './style.css';
 
 interface Props {
