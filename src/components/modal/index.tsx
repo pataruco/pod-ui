@@ -13,13 +13,15 @@ interface Props {
   files: any[];
 }
 
+Modal.setAppElement('#root');
+
 export class ModalComponent extends Component<Props> {
   constructor(props) {
     super(props);
   }
 
   public componentWillMount() {
-    Modal.setAppElement('#root');
+    // Modal.setAppElement('#root');
   }
 
   public handleClose = () => {
