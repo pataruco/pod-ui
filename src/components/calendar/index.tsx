@@ -3,12 +3,16 @@ import moment from 'moment';
 import React, { Component } from 'react';
 import BigCalendar from 'react-big-calendar';
 import { connect } from 'react-redux';
+import { saveDate } from 'state/date/actions';
+import { openModal } from 'state/modal/actions';
 
 BigCalendar.momentLocalizer(moment);
 
 interface Props {
   dates: {};
   dataIsLoaded: boolean;
+  renderModalFn: () => void;
+  saveDateFn: (any) => void;
 }
 
 export class CalendarComponent extends Component<Props> {
@@ -19,7 +23,10 @@ export class CalendarComponent extends Component<Props> {
   }
 
   public handleSelectEvent = event => {
-    // console.log('event', event);
+    if (event) {
+      this.props.saveDateFn(event);
+      return this.props.renderModalFn();
+    }
   };
 
   public render() {
@@ -39,11 +46,24 @@ export class CalendarComponent extends Component<Props> {
   }
 }
 
+const renderModal = renderModalFn => () => {
+  return renderModalFn();
+};
+
+export const mapDispatchToProps = {
+  saveDateFn: saveDate,
+  renderModalFn: renderModal(openModal),
+};
+
 export const mapStateToProps = ({ user: { dates, dataIsLoaded } }) => ({
   dates,
   dataIsLoaded,
 });
 
-const connectedCalendar = connect(mapStateToProps)(CalendarComponent);
+const connectedCalendar = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+  // @ts-ignore
+)(CalendarComponent);
 
 export default connectedCalendar;
