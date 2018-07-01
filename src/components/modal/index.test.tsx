@@ -1,6 +1,8 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import { ModalComponent } from './index';
+import { Provider } from 'react-redux';
+import configureStore from 'redux-mock-store';
+import Modal, { ModalComponent } from './index';
 
 describe('ModalComponent', () => {
   it('renders', () => {
@@ -10,5 +12,24 @@ describe('ModalComponent', () => {
       files: [],
     };
     expect(shallow(<ModalComponent {...defaultProps} />)).toMatchSnapshot();
+  });
+});
+
+describe('Modal', () => {
+  const store = configureStore([])({});
+
+  it('renders', () => {
+    const defaultProps = {
+      isModalOpen: true,
+      date: 'somedate',
+      files: [],
+    };
+    expect(
+      shallow(
+        <Provider store={store}>
+          <Modal {...defaultProps} />
+        </Provider>,
+      ),
+    ).toMatchSnapshot();
   });
 });

@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Modal renders 1`] = `
+<Connect(ModalComponent)
+  date="somedate"
+  files={Array []}
+  isModalOpen={true}
+/>
+`;
+
 exports[`ModalComponent renders 1`] = `
 <Modal
   ariaHideApp={true}
