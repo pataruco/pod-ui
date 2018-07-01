@@ -19,7 +19,7 @@ export class ModalComponent extends Component<Props> {
   }
 
   public componentWillMount() {
-    Modal.setAppElement('#root');
+    Modal.setAppElement(document.getElementById('root'));
   }
 
   public handleClose = () => {
