@@ -24,7 +24,6 @@ export class AppComponent extends Component<Props> {
   public render() {
     return (
       <div className={styles.app}>
-        <h1> Hola, World </h1>
         <Header />
         <Calendar />
         <Modal />
