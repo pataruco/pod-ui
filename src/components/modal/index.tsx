@@ -1,3 +1,4 @@
+import Slider from 'components/slider';
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 // @ts-ignore
@@ -28,7 +29,7 @@ export class ModalComponent extends Component<Props> {
   };
 
   public render() {
-    const { dates, files, isModalOpen } = this.props;
+    const { date, files, isModalOpen } = this.props;
     return (
       <Modal
         isOpen={isModalOpen}
@@ -37,6 +38,7 @@ export class ModalComponent extends Component<Props> {
         contentLabel="Example Modal"
       >
         <button onClick={this.handleClose}>close</button>
+        <Slider date={date} files={files} />
       </Modal>
     );
   }
