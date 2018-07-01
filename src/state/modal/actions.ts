@@ -9,3 +9,7 @@ export const closeModal = createAction(CLOSE_MODAL);
 export const renderModal = (dispatchFn = dispatch) => {
   return dispatchFn(openModal);
 };
+
+export const hideModal = (dispatchFn = dispatch) => {
+  return dispatchFn(closeModal);
+};

@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
-import { connect } from 'react-redux';
+// @ts-ignore
+import { connect, dispatch } from 'react-redux';
+import { clearDate } from 'state/date/actions';
+import { closeModal } from 'state/modal/actions';
 
 interface Props {
   isModalOpen: boolean;
+  clearDateFn?: typeof dispatch;
+  hideModalFn?: () => void;
+  date: string;
+  files: any[];
 }
 
 export class ModalComponent extends Component<Props> {
@@ -11,25 +18,51 @@ export class ModalComponent extends Component<Props> {
     super(props);
   }
 
+  public componentWillMount() {
+    Modal.setAppElement('#root');
+  }
+
+  public handleClose = () => {
+    this.props.clearDateFn();
+    return this.props.hideModalFn();
+  };
+
   public render() {
+    const { dates, files, isModalOpen } = this.props;
     return (
       <Modal
-        isOpen={this.props.isModalOpen}
-        // onAfterOpen={this.afterOpenModal}
-        // onRequestClose={this.closeModal}
+        isOpen={isModalOpen}
+        onRequestClose={this.handleClose}
         // style={customStyles}
         contentLabel="Example Modal"
       >
-        <h1>Hola</h1>
+        <button onClick={this.handleClose}>close</button>
       </Modal>
     );
   }
 }
 
-export const mapStateToProps = ({ modal: { isModalOpen } }) => ({
+const hideModal = hideModalFn => () => {
+  return hideModalFn();
+};
+
+export const mapDispatchToProps = {
+  clearDateFn: clearDate,
+  hideModalFn: hideModal(closeModal),
+};
+
+export const mapStateToProps = ({
+  modal: { isModalOpen },
+  date: { date, files },
+}) => ({
   isModalOpen,
+  date,
+  files,
 });
 
-const ConnectedModal = connect(mapStateToProps)(ModalComponent);
+const ConnectedModal = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(ModalComponent);
 
 export default ConnectedModal;
