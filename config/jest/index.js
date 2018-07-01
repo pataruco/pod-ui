@@ -2,3 +2,4 @@
 import './jsdom-config';
 import './enzyme-config';
 import './fetch-config';
+import './slider-config';

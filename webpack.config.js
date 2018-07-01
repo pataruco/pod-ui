@@ -10,6 +10,8 @@ const postcssPresetEnv = require('postcss-preset-env')({
 });
 const postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
+require('url-loader');
+require('file-loader');
 
 module.exports = {
   entry: [
@@ -46,6 +48,10 @@ module.exports = {
           limit: 10000,
           name: 'static/media/[name].[hash:8].[ext]',
         },
+      },
+      {
+        test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
+        loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]',
       },
       {
         test: /\.css$/,

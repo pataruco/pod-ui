@@ -28,5 +28,9 @@ exports[`ModalComponent renders 1`] = `
   >
     close
   </button>
+  <Carrousel
+    date="somedate"
+    files={Array []}
+  />
 </Modal>
 `;

@@ -1,6 +1,4 @@
-// import '!style-loader!css-loader!./slick.css';
-// import '!style-loader!css-loader!./slick-theme.css';
-// import '!style-loader!css-loader!./style.css';
+import '!style-loader!css-loader!./slick.css';
 import React from 'react';
 import Slider from 'react-slick';
 const baseUrl = 'https://peter-of-the-day.s3.amazonaws.com/';
@@ -18,7 +16,7 @@ interface SlideProps {
   };
 }
 
-const Slide = ({ date, file }: SlideProps) => {
+export const Slide = ({ date, file }: SlideProps) => {
   return (
     <article>
       <img src={`${baseUrl}${file.url}`} alt={`Peter on ${date}`} />
@@ -26,7 +24,7 @@ const Slide = ({ date, file }: SlideProps) => {
   );
 };
 
-const Carrousel = ({ date, files }: Props) => {
+export const Carrousel = ({ date, files }: Props) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -34,12 +32,14 @@ const Carrousel = ({ date, files }: Props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   return (
     <Slider {...settings}>
       <h3>
         <time>{date}</time>
       </h3>
-      {files.map(file => <Slide date={date} file={file} key={file.url} />)}
+      {files &&
+        files.map(file => <Slide date={date} file={file} key={file.url} />)}
     </Slider>
   );
 };
