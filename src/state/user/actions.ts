@@ -1,5 +1,5 @@
-// @ts-ignore
 import moment from 'moment';
+// @ts-ignore
 import { dispatch } from 'redux';
 import { createAction } from 'redux-actions';
 import 'whatwg-fetch';
