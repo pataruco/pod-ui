@@ -3,9 +3,13 @@
 exports[`Connected header renders 1`] = `<Connect(HeaderComponent) />`;
 
 exports[`HeaderComponent renders 1`] = `
-<header>
-  <h1>
-    I am the header
+<header
+  className="header"
+>
+  <h1
+    className="title"
+  >
+    Peter of the day
   </h1>
 </header>
 `;

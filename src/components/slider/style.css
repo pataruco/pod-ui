@@ -1,0 +1,65 @@
+.button {
+  padding: 0;
+  border: none;
+  display: block;
+  width: 4rem;
+}
+
+.buttonBack {
+  transform: rotate(-90deg);
+}
+
+.buttonNext {
+  transform: rotate(90deg);
+}
+
+.dot {
+  padding: 0;
+  border: none;
+  display: block;
+  width: 1rem;
+}
+button:disabled.dot svg {
+  fill: #ccc;
+}
+
+.dots {
+  display: flex;
+  max-width: 25%;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding: 0 1rem;
+  position: absolute;
+  top: calc(50% - 2rem);
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.img {
+  max-width: 80vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+
+.innerSlide {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.slider {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}

@@ -1,35 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Carrousel render 1`] = `
-<Slider
-  dots={true}
-  infinite={true}
-  slidesToScroll={1}
-  slidesToShow={1}
-  speed={500}
+<i
+  className={null}
+  currentSlide={0}
+  disableAnimation={false}
+  disableKeyboard={false}
+  dragEnabled={true}
+  hasMasterSpinner={false}
+  interval={5000}
+  isPageScrollLocked={false}
+  isPlaying={false}
+  lockOnWindowScroll={false}
+  naturalSlideHeight={0}
+  naturalSlideWidth={0}
+  orientation="horizontal"
+  playDirection="forward"
+  step={1}
+  tag="div"
+  totalSlides={1}
+  touchEnabled={true}
+  visibleSlides={1}
 >
-  <h3>
-    <time>
-      somedate
-    </time>
-  </h3>
-  <Slide
-    date="somedate"
-    file={
-      Object {
-        "url": "someurl",
-      }
-    }
-    key="someurl"
-  />
-</Slider>
+  <n
+    classNameTray="slider"
+  >
+    <n
+      index={0}
+      innerClassName="innerSlide"
+      key="0"
+    >
+      <SlideWrapper
+        date="somedate"
+        file={
+          Object {
+            "url": "someurl",
+          }
+        }
+        key="0"
+      />
+    </n>
+  </n>
+  <aside
+    className="dots"
+  >
+    <n
+      className="dot"
+      key="0"
+      slide={0}
+    >
+      <DotIcon />
+    </n>
+  </aside>
+  <aside
+    className="footer"
+  >
+    <n
+      className="button buttonBack"
+    >
+      <Arrow />
+    </n>
+    <n
+      className="button buttonNext"
+    >
+      <Arrow />
+    </n>
+  </aside>
+</i>
 `;
 
-exports[`Slide render 1`] = `
-<article>
-  <img
-    alt="Peter on somedate"
-    src="https://peter-of-the-day.s3.amazonaws.com/someurl"
-  />
-</article>
+exports[`SlideWrapper render 1`] = `
+<img
+  alt="Peter on somedate"
+  className="img"
+  src="https://peter-of-the-day.s3.amazonaws.com/someurl"
+/>
 `;

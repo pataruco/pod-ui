@@ -1,0 +1,5 @@
+@import '../../css/variables';
+
+.calendarWrapper {
+  padding: var(--base-padding);
+}

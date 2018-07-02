@@ -8,7 +8,9 @@ exports[`Calendar renders 1`] = `
 `;
 
 exports[`CalendarComponent renders 1`] = `
-<section>
+<section
+  className="calendarWrapper"
+>
   <Uncontrolled(Calendar)
     events={Object {}}
     onSelectEvent={[Function]}

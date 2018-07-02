@@ -8,6 +8,8 @@ describe('CalendarComponent', () => {
   const defaultProps = {
     dates: {},
     dataIsLoaded: true,
+    renderModalFn: jest.fn(),
+    saveDateFn: jest.fn(),
   };
 
   it('renders', () => {
