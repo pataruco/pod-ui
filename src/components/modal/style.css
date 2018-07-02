@@ -1,9 +1,16 @@
 @import '../../css/variables';
 
-.buttonWrapper {
+.modalHeader {
+  align-items: center;
+  border-bottom: 0.1rem solid;
   display: flex;
-  justify-content: flex-end;
-  padding-bottom: 1rem;
+  justify-content: space-between;
+  margin-bottom: var(--base-padding);
+  padding-bottom: var(--base-padding);
+}
+
+.modalHeader h2 {
+  margin: 0;
 }
 
 .closeButton {

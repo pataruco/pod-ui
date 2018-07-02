@@ -13,7 +13,7 @@ exports[`Carrousel render 1`] = `
   isPlaying={false}
   lockOnWindowScroll={false}
   naturalSlideHeight={0}
-  naturalSlideWidth={100}
+  naturalSlideWidth={0}
   orientation="horizontal"
   playDirection="forward"
   step={1}
@@ -42,6 +42,17 @@ exports[`Carrousel render 1`] = `
     </n>
   </n>
   <aside
+    className="dots"
+  >
+    <n
+      className="dot"
+      key="0"
+      slide={0}
+    >
+      <DotIcon />
+    </n>
+  </aside>
+  <aside
     className="footer"
   >
     <n
@@ -61,6 +72,7 @@ exports[`Carrousel render 1`] = `
 exports[`SlideWrapper render 1`] = `
 <img
   alt="Peter on somedate"
+  className="img"
   src="https://peter-of-the-day.s3.amazonaws.com/someurl"
 />
 `;

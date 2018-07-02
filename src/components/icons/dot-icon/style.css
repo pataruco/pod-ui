@@ -16,3 +16,7 @@
 .svg:active {
   stroke: #ccc;
 }
+
+.svg.active {
+  fill: var(--black);
+}

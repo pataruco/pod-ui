@@ -1,5 +1,6 @@
 import CloseButton from 'components/icons/close-button';
 import Slider from 'components/slider';
+import moment from 'moment';
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 // @ts-ignore
@@ -40,7 +41,12 @@ export class ModalComponent extends Component<Props> {
         onRequestClose={this.handleClose}
         overlayClassName={styles.overlay}
       >
-        <div className={styles.buttonWrapper}>
+        <div className={styles.modalHeader}>
+          <h2>
+            <time>
+              {moment(date, 'YYYY-MM-DD').format('dddd, MMMM Do YYYY')}
+            </time>
+          </h2>
           <button className={styles.closeButton} onClick={this.handleClose}>
             <CloseButton />
           </button>

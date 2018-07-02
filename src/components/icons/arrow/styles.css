@@ -12,3 +12,7 @@
 .svg:active {
   stroke-width: 4;
 }
+
+.svg:active {
+  stroke: #ccc;
+}

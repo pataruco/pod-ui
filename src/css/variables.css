@@ -9,5 +9,7 @@
   --black: #000;
   --primary: #00b229;
   --secondary: #ff0019;
-  --base-padding: 1.6rem;
+  --base-padding: 1rem;
+  /* font */
+  --font-family: sans-serif;
 }

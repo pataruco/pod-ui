@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DotIcon renders 1`] = `
+<svg
+  className="svg"
+  viewBox="0 0 52 52"
+>
+  <circle
+    cx="26"
+    cy="26"
+    r="24"
+  />
+</svg>
+`;

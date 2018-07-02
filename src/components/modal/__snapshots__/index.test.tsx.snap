@@ -26,8 +26,13 @@ exports[`ModalComponent renders 1`] = `
   shouldReturnFocusAfterClose={true}
 >
   <div
-    className="buttonWrapper"
+    className="modalHeader"
   >
+    <h2>
+      <time>
+        Invalid date
+      </time>
+    </h2>
     <button
       className="closeButton"
       onClick={[Function]}

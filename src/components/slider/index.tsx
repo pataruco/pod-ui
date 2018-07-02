@@ -1,9 +1,11 @@
 import cx from 'classnames';
 import Arrow from 'components/icons/arrow';
+import DotIcon from 'components/icons/dot-icon';
 import {
   ButtonBack,
   ButtonNext,
   CarouselProvider,
+  Dot,
   Slide,
   Slider,
 } from 'pure-react-carousel';
@@ -25,7 +27,13 @@ interface SlideProps {
 }
 
 export const SlideWrapper = ({ date, file }: SlideProps) => {
-  return <img alt={`Peter on ${date}`} src={`${baseUrl}${file.url}`} />;
+  return (
+    <img
+      alt={`Peter on ${date}`}
+      src={`${baseUrl}${file.url}`}
+      className={styles.img}
+    />
+  );
 };
 
 export const Carrousel = ({ date, files }: Props) => {
@@ -33,7 +41,7 @@ export const Carrousel = ({ date, files }: Props) => {
     return (
       <CarouselProvider
         naturalSlideHeight={0}
-        naturalSlideWidth={100}
+        naturalSlideWidth={0}
         totalSlides={files.length}
       >
         <Slider classNameTray={styles.slider}>
@@ -48,6 +56,14 @@ export const Carrousel = ({ date, files }: Props) => {
               </Slide>
             ))}
         </Slider>
+        <aside className={styles.dots}>
+          {files &&
+            files.map((_, index) => (
+              <Dot slide={index} key={index} className={styles.dot}>
+                <DotIcon />
+              </Dot>
+            ))}
+        </aside>
         <aside className={styles.footer}>
           <ButtonBack className={cx(styles.button, styles.buttonBack)}>
             <Arrow />
