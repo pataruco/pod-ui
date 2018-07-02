@@ -1,4 +1,3 @@
-import '!style-loader!css-loader!./carrousel.css';
 import {
   ButtonBack,
   ButtonNext,
@@ -24,36 +23,37 @@ interface SlideProps {
 }
 
 export const SlideWrapper = ({ date, file }: SlideProps) => {
-  return (
-    <article className={styles.imgWrapper}>
-      <img
-        alt={`Peter on ${date}`}
-        className={styles.img}
-        src={`${baseUrl}${file.url}`}
-      />
-    </article>
-  );
+  return <img alt={`Peter on ${date}`} src={`${baseUrl}${file.url}`} />;
 };
 
 export const Carrousel = ({ date, files }: Props) => {
-  return (
-    <CarouselProvider
-      naturalSlideHeight={0}
-      naturalSlideWidth={100}
-      totalSlides={files.length}
-    >
-      <Slider>
-        {files &&
-          files.map((file, index) => (
-            <Slide index={index}>
-              <SlideWrapper date={date} file={file} key={file.url} />
-            </Slide>
-          ))}
-      </Slider>
-      <ButtonBack>Back</ButtonBack>
-      <ButtonNext>Next</ButtonNext>
-    </CarouselProvider>
-  );
+  if (Array.isArray(files) && files.length > 0) {
+    return (
+      <CarouselProvider
+        naturalSlideHeight={0}
+        naturalSlideWidth={100}
+        totalSlides={files.length}
+      >
+        <Slider classNameTray={styles.slider}>
+          {files &&
+            files.map((file, index) => (
+              <Slide
+                index={index}
+                key={index}
+                innerClassName={styles.innerSlide}
+              >
+                <SlideWrapper date={date} file={file} key={index} />
+              </Slide>
+            ))}
+        </Slider>
+        <aside className={styles.footer}>
+          <ButtonBack>Back</ButtonBack>
+          <ButtonNext>Next</ButtonNext>
+        </aside>
+      </CarouselProvider>
+    );
+  }
+  return null;
 };
 
 export default Carrousel;

@@ -12,10 +12,12 @@ exports[`ModalComponent renders 1`] = `
 <Modal
   ariaHideApp={true}
   bodyOpenClassName="ReactModal__Body--open"
+  className="modal"
   closeTimeoutMS={0}
   contentLabel="Example Modal"
   isOpen={true}
   onRequestClose={[Function]}
+  overlayClassName="overlay"
   parentSelector={[Function]}
   portalClassName="ReactModalPortal"
   shouldCloseOnEsc={true}

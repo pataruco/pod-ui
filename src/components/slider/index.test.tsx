@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import { Carrousel, Slide } from './index';
+import { Carrousel, SlideWrapper } from './index';
 
 describe('Carrousel', () => {
   it('render', () => {
@@ -17,7 +17,7 @@ describe('Carrousel', () => {
   });
 });
 
-describe('Slide', () => {
+describe('SlideWrapper', () => {
   it('render', () => {
     const defaultProps = {
       date: 'somedate',
@@ -26,6 +26,6 @@ describe('Slide', () => {
       },
     };
 
-    expect(shallow(<Slide {...defaultProps} />)).toMatchSnapshot();
+    expect(shallow(<SlideWrapper {...defaultProps} />)).toMatchSnapshot();
   });
 });
