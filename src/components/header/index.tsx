@@ -25,8 +25,7 @@ export class HeaderComponent extends Component<Props> {
         {dataIsLoaded && (
           <aside>
             <p>
-              Carlotta is here updated{' '}
-              <time dateTime={updated}>{lastUpdate}</time>
+              updated <time dateTime={updated}>{lastUpdate}</time>
             </p>
           </aside>
         )}

@@ -52,6 +52,7 @@ button.rbc-input::-moz-focus-inner {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  text-align: center;
 }
 .rbc-rtl {
   direction: rtl;
@@ -162,6 +163,10 @@ button.rbc-input::-moz-focus-inner {
   white-space: nowrap;
   order: 1;
 }
+
+.rbc-toolbar button {
+  transition: 0.25s ease all;
+}
 .rbc-btn-group > button:first-child:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -195,9 +200,8 @@ button.rbc-input::-moz-focus-inner {
   margin-left: 10px;
 }
 .rbc-event {
-  padding: 2px 5px;
+  padding: 1rem 0;
   background-color: #000;
-  border-radius: 5px;
   color: #fff;
   cursor: pointer;
 }
@@ -247,7 +251,7 @@ button.rbc-input::-moz-focus-inner {
   flex-direction: row;
 }
 .rbc-row-segment {
-  padding: 0 1px 1px 1px;
+  /* padding: 0 1px 1px 1px; */
 }
 .rbc-selected-cell {
   background-color: rgba(0, 0, 0, 0.1);

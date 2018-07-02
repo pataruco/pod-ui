@@ -25,11 +25,16 @@ exports[`ModalComponent renders 1`] = `
   shouldFocusAfterRender={true}
   shouldReturnFocusAfterClose={true}
 >
-  <button
-    onClick={[Function]}
+  <div
+    className="buttonWrapper"
   >
-    close
-  </button>
+    <button
+      className="closeButton"
+      onClick={[Function]}
+    >
+      <CloseButton />
+    </button>
+  </div>
   <Carrousel
     date="somedate"
     files={Array []}

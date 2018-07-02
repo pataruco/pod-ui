@@ -44,11 +44,15 @@ exports[`Carrousel render 1`] = `
   <aside
     className="footer"
   >
-    <n>
-      Back
+    <n
+      className="button buttonBack"
+    >
+      <Arrow />
     </n>
-    <n>
-      Next
+    <n
+      className="button buttonNext"
+    >
+      <Arrow />
     </n>
   </aside>
 </i>

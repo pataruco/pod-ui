@@ -1,5 +1,18 @@
 @import '../../css/variables';
 
+.buttonWrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 1rem;
+}
+
+.closeButton {
+  border: none;
+  display: block;
+  padding: 0;
+  width: 4rem;
+}
+
 .modal {
   background: rgb(255, 255, 255);
   border-radius: 4px;
@@ -8,7 +21,7 @@
   left: var(--base-padding);
   outline: none;
   overflow: auto;
-  padding: 20px;
+  padding: 1rem;
   position: absolute;
   right: var(--base-padding);
   top: var(--base-padding);

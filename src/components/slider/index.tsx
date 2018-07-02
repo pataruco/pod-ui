@@ -1,3 +1,5 @@
+import cx from 'classnames';
+import Arrow from 'components/icons/arrow';
 import {
   ButtonBack,
   ButtonNext,
@@ -47,8 +49,12 @@ export const Carrousel = ({ date, files }: Props) => {
             ))}
         </Slider>
         <aside className={styles.footer}>
-          <ButtonBack>Back</ButtonBack>
-          <ButtonNext>Next</ButtonNext>
+          <ButtonBack className={cx(styles.button, styles.buttonBack)}>
+            <Arrow />
+          </ButtonBack>
+          <ButtonNext className={cx(styles.button, styles.buttonNext)}>
+            <Arrow />
+          </ButtonNext>
         </aside>
       </CarouselProvider>
     );

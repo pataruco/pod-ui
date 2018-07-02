@@ -1,6 +1,26 @@
+.button {
+  padding: 0;
+  border: none;
+  display: block;
+  width: 4rem;
+}
+
+.buttonBack {
+  transform: rotate(-90deg);
+}
+
+.buttonNext {
+  transform: rotate(90deg);
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
+  left: 0;
+  position: absolute;
+  top: calc(50% - 2rem);
+  transform: translateY(-50%);
+  width: 100%;
 }
 
 .innerSlide {
@@ -14,4 +34,5 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }

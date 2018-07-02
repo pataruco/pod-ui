@@ -93,6 +93,7 @@
   },
   "dependencies": {
     "autoprefixer": "^8.6.3",
+    "classnames": "^2.2.6",
     "moment": "^2.22.2",
     "pure-react-carousel": "^1.13.2",
     "react": "^16.4.1",

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CloseButton renders 1`] = `
+<svg
+  className="svg"
+  viewBox="0 0 52 52"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle
+    className="circle"
+    cx="26"
+    cy="26"
+    r="24"
+  />
+  <line
+    className="lines"
+    x1="15"
+    x2="37"
+    y1="15"
+    y2="37"
+  />
+  <line
+    className="lines"
+    x1="15"
+    x2="37"
+    y1="37"
+    y2="15"
+  />
+</svg>
+`;

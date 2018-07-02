@@ -1,3 +1,4 @@
+import CloseButton from 'components/icons/close-button';
 import Slider from 'components/slider';
 import React, { Component } from 'react';
 import Modal from 'react-modal';
@@ -39,7 +40,11 @@ export class ModalComponent extends Component<Props> {
         onRequestClose={this.handleClose}
         overlayClassName={styles.overlay}
       >
-        <button onClick={this.handleClose}>close</button>
+        <div className={styles.buttonWrapper}>
+          <button className={styles.closeButton} onClick={this.handleClose}>
+            <CloseButton />
+          </button>
+        </div>
         <Slider date={date} files={files} />
       </Modal>
     );

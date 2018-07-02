@@ -1,0 +1,14 @@
+@import '../../../css/variables';
+
+.svg {
+  fill: none;
+  stroke-width: 1;
+  stroke: var(--black);
+  transition: 0.25s ease all;
+}
+
+.svg:hover,
+.svg:focus,
+.svg:active {
+  stroke-width: 2;
+}
