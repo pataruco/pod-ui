@@ -1,8 +1,15 @@
-import '!style-loader!css-loader!./slick.css';
+import '!style-loader!css-loader!./carrousel.css';
+import {
+  ButtonBack,
+  ButtonNext,
+  CarouselProvider,
+  Slide,
+  Slider,
+} from 'pure-react-carousel';
 import React from 'react';
-import Slider from 'react-slick';
+import styles from './style.css';
+
 const baseUrl = 'https://peter-of-the-day.s3.amazonaws.com/';
-// import styles from './style.css';
 
 interface Props {
   date: string;
@@ -16,31 +23,36 @@ interface SlideProps {
   };
 }
 
-export const Slide = ({ date, file }: SlideProps) => {
+export const SlideWrapper = ({ date, file }: SlideProps) => {
   return (
-    <article>
-      <img src={`${baseUrl}${file.url}`} alt={`Peter on ${date}`} />
+    <article className={styles.imgWrapper}>
+      <img
+        alt={`Peter on ${date}`}
+        className={styles.img}
+        src={`${baseUrl}${file.url}`}
+      />
     </article>
   );
 };
 
 export const Carrousel = ({ date, files }: Props) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
   return (
-    <Slider {...settings}>
-      <h3>
-        <time>{date}</time>
-      </h3>
-      {files &&
-        files.map(file => <Slide date={date} file={file} key={file.url} />)}
-    </Slider>
+    <CarouselProvider
+      naturalSlideHeight={0}
+      naturalSlideWidth={100}
+      totalSlides={files.length}
+    >
+      <Slider>
+        {files &&
+          files.map((file, index) => (
+            <Slide index={index}>
+              <SlideWrapper date={date} file={file} key={file.url} />
+            </Slide>
+          ))}
+      </Slider>
+      <ButtonBack>Back</ButtonBack>
+      <ButtonNext>Next</ButtonNext>
+    </CarouselProvider>
   );
 };
 
