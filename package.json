@@ -85,7 +85,7 @@
     "eslint": "eslint src",
     "lint": "yarn typecheck && yarn eslint && yarn tslint",
     "precommit": "lint-staged",
-    "start": "webpack-dev-server --mode development",
+    "start": "webpack-dev-server --config ./webpack.config.dev.js --mode development",
     "test": "jest ./src --setupTestFrameworkScriptFile=./config/jest/index.js",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "tslint": "tslint -c tslint.json '{src,test}/**/*.{ts,tsx}' --project .",
