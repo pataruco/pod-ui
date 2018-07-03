@@ -110,9 +110,14 @@ module.exports = {
       new UglifyJsPlugin({
         cache: true,
         parallel: true,
-        sourceMap: true, // set to true if you want JS source maps
+        sourceMap: true,
       }),
-      new OptimizeCSSAssetsPlugin({}),
+      new OptimizeCSSAssetsPlugin({
+        cssProcessorOptions: {
+          safe: true,
+          discardComments: { removeAll: true },
+        },
+      }),
     ],
   },
 };
