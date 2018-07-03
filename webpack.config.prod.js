@@ -1,6 +1,8 @@
 const autoprefixer = require('autoprefixer');
+const eslintFormatter = require('react-dev-utils/eslintFormatter');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
-const webpack = require('webpack');
+const postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
 const postcssImport = require('postcss-import');
 const postcssMixins = require('postcss-mixins');
 const postcssPresetEnv = require('postcss-preset-env')({
@@ -8,14 +10,20 @@ const postcssPresetEnv = require('postcss-preset-env')({
     autoprefixer: false,
   },
 });
-const postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
-const eslintFormatter = require('react-dev-utils/eslintFormatter');
-require('url-loader');
+const webpack = require('webpack');
 require('file-loader');
+require('url-loader');
 
 module.exports = {
   entry: [require.resolve('./config/polyfills'), './src/index.js'],
   mode: 'production',
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[name].css',
+      path: path.resolve(__dirname, 'dist'),
+    }),
+  ],
   module: {
     rules: [
       {
@@ -52,7 +60,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          require.resolve('style-loader'),
+          MiniCssExtractPlugin.loader,
           {
             loader: require.resolve('typings-for-css-modules-loader'),
             options: {
@@ -81,8 +89,6 @@ module.exports = {
   },
   resolve: { extensions: ['*', '.js', '.jsx', '.ts', '.tsx'] },
   output: {
-    // path: path.resolve(__dirname, 'dist/'),
-    // filename: 'bundle.js',
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
