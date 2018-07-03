@@ -81,11 +81,11 @@
     "babel-core": "^7.0.0-bridge.0"
   },
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "webpack --config ./webpack.config.prod.js --mode production",
     "eslint": "eslint src",
     "lint": "yarn typecheck && yarn eslint && yarn tslint",
     "precommit": "lint-staged",
-    "start": "webpack-dev-server --mode development",
+    "start": "webpack-dev-server --config ./webpack.config.dev.js --mode development",
     "test": "jest ./src --setupTestFrameworkScriptFile=./config/jest/index.js",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "tslint": "tslint -c tslint.json '{src,test}/**/*.{ts,tsx}' --project .",
