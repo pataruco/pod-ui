@@ -1,6 +1,7 @@
 const autoprefixer = require('autoprefixer');
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const path = require('path');
 const postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
 const postcssImport = require('postcss-import');
@@ -10,6 +11,7 @@ const postcssPresetEnv = require('postcss-preset-env')({
     autoprefixer: false,
   },
 });
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
 require('file-loader');
 require('url-loader');
@@ -103,5 +105,13 @@ module.exports = {
         },
       },
     },
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true, // set to true if you want JS source maps
+      }),
+      new OptimizeCSSAssetsPlugin({}),
+    ],
   },
 };
