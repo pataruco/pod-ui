@@ -81,18 +81,21 @@ module.exports = {
   },
   resolve: { extensions: ['*', '.js', '.jsx', '.ts', '.tsx'] },
   output: {
-    path: path.resolve(__dirname, 'dist/'),
-    filename: 'bundle.js',
+    // path: path.resolve(__dirname, 'dist/'),
+    // filename: 'bundle.js',
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
-  // optimization: {
-  //   splitChunks: {
-  //     cacheGroups: {
-  //       commons: {
-  //         test: /[\\/]node_modules[\\/]/,
-  //         name: 'vendor',
-  //         chunks: 'all',
-  //       },
-  //     },
-  //   },
-  // },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
+  },
 };
