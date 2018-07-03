@@ -25,6 +25,7 @@ module.exports = {
       chunkFilename: '[name].css',
       path: path.resolve(__dirname, 'dist'),
     }),
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
   ],
   module: {
     rules: [
