@@ -1,5 +1,6 @@
 const autoprefixer = require('autoprefixer');
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const path = require('path');
@@ -26,6 +27,14 @@ module.exports = {
       path: path.resolve(__dirname, 'dist'),
     }),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    new HtmlWebpackPlugin({
+      cache: true,
+      hash: true,
+      minify: true,
+      production: true,
+      template: './public/template.html',
+      title: 'Peter of the Day',
+    }),
   ],
   module: {
     rules: [
