@@ -82,7 +82,17 @@ module.exports = {
   resolve: { extensions: ['*', '.js', '.jsx', '.ts', '.tsx'] },
   output: {
     path: path.resolve(__dirname, 'dist/'),
-    publicPath: '/dist/',
     filename: 'bundle.js',
   },
+  // optimization: {
+  //   splitChunks: {
+  //     cacheGroups: {
+  //       commons: {
+  //         test: /[\\/]node_modules[\\/]/,
+  //         name: 'vendor',
+  //         chunks: 'all',
+  //       },
+  //     },
+  //   },
+  // },
 };
