@@ -48,6 +48,7 @@
     "eslint-plugin-security": "^1.4.0",
     "file-loader": "^1.1.11",
     "flux-standard-action": "^2.0.3",
+    "gh-pages": "^1.2.0",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
@@ -93,7 +94,8 @@
     "test": "jest ./src --setupTestFrameworkScriptFile=./config/jest/index.js",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "tslint": "tslint -c tslint.json '{src,test}/**/*.{ts,tsx}' --project .",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "autoprefixer": "^8.6.3",
