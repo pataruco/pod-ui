@@ -59,7 +59,7 @@ Peter of the Day UI (_POD-UI_) is a React SPA that is consuming JSON data create
   yarn test
   ```
 
-## To Do
+## To do
 
 - [ ] Navigation
 - [ ] Download
